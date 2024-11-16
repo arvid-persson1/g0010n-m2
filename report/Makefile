@@ -1,8 +1,8 @@
 MAIN = main
 
-TRASH = $(MAIN).aux $(MAIN).bcf $(MAIN).log $(MAIN).run.xml $(MAIN).bbl $(MAIN).blg $(MAIN).toc
+TRASH = $(MAIN).aux $(MAIN).bcf $(MAIN).log $(MAIN).run.xml $(MAIN).bbl $(MAIN).blg $()
 
-$(MAIN).pdf: $(MAIN).tex
+$(MAIN).pdf: *.tex
 	pdflatex $(MAIN) > /dev/null
 	biber $(MAIN)    > /dev/null
 	pdflatex $(MAIN) > /dev/null
