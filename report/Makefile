@@ -2,7 +2,7 @@ MAIN = main
 
 TRASH = $(MAIN).aux $(MAIN).bcf $(MAIN).log $(MAIN).run.xml $(MAIN).bbl $(MAIN).blg $()
 
-$(MAIN).pdf: *.tex
+$(MAIN).pdf: *.tex references.bib
 	pdflatex $(MAIN) > /dev/null
 	biber $(MAIN)    > /dev/null
 	pdflatex $(MAIN) > /dev/null
