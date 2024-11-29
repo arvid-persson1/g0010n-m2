@@ -1,6 +1,6 @@
 MAIN = main
 
-TRASH = $(MAIN).aux $(MAIN).bcf $(MAIN).log $(MAIN).run.xml $(MAIN).bbl $(MAIN).blg $()
+TRASH = $(MAIN).aux $(MAIN).bcf $(MAIN).log $(MAIN).run.xml $(MAIN).bbl $(MAIN).blg $(MAIN).toc
 
 $(MAIN).pdf: *.tex references.bib
 	pdflatex $(MAIN) > /dev/null
